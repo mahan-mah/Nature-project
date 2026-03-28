@@ -1,0 +1,15 @@
+{
+  "name": "natrue-jonas",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}
