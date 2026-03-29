@@ -1,0 +1,51 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  &__side {
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: all 500ms;
+    top: 0;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    backface-visibility: hidden;
+    &--front {
+    }
+    &--back {
+      background-color: red;
+      transform: rotateY(180deg);
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__header-image {
+    background-image:
+      linear-gradient(to right bottom, #ffb900, #ff7730),
+      url("../../img/nat-5.jpg");
+    background-size: cover;
+    height: 23rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen;
+  }
+  &__heading {
+    display: block;
+    position: absolute;
+    text-transform: uppercase;
+    background-color: orange;
+    color: $color-white;
+    right: 5%;
+    top: 70%;
+    font-size: 4rem;
+    z-index: 999;
+  }
+  &__content {
+    padding: 3rem;
+  }
+}
