@@ -7,7 +7,28 @@
 }
 html {
   font-size: 62.5%;
+  @include respond(tab-land) {
+    // less 1200
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond(tab-port) {
+    // less 900
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
 }
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+*:focus {
+  outline: 3px solid $color-primary;
+  border-radius: 0.1rem;
+  outline-offset: 1rem;
 }

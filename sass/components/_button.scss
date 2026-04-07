@@ -1,4 +1,7 @@
 .btn {
+  transition: all 200ms;
+
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -9,15 +12,31 @@
     cursor: pointer;
     transition: all 200ms;
     position: relative;
+    outline: none;
+    font-size: $default-font-size;
+    border: none;
   }
+  // hovers , animations , active state
   &--animated {
     animation: buttonAnimation 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
-  &:hover {
+  &--hover-primary:hover {
     background-color: transparent;
-    outline: 3px solid #7ed56f;
+    outline: 3px solid $color-primary-light;
     color: $color-white;
+  }
+  &--hover-secondary:hover {
+    background-color: transparent;
+    outline: 3px solid $color-secondary-light;
+    color: $color-white;
+  }
+  &--hover-tertiary:hover {
+    background-color: transparent;
+    outline: 3px solid $color-tertiary-light;
+    color: $color-white;
+  }
+  &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     &::after {
@@ -25,10 +44,13 @@
       opacity: 0;
     }
   }
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
+
   &::after {
     content: "";
     display: inline-block;
@@ -49,8 +71,15 @@
       background-color: $color-white;
     }
   }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary-light;
+    }
+  }
 }
-.learn-more-link {
+.cta-link {
   &:link,
   &:visited {
     color: $color-primary;

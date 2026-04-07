@@ -7,7 +7,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass sass/main.scss css/style.css --watch"
+    "watch:sass": "sass sass/main.scss css/style.css --watch",
+    "compile:sass": "sass sass/main.scss css/style.comp.css"
   },
   "devDependencies": {
     "sass": "^1.98.0"

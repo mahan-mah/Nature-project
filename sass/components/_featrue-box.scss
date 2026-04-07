@@ -9,6 +9,9 @@
   &:hover {
     transform: translateY(-1.5rem) scale(1.05);
   }
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
   &__icon {
     display: inline-block;
     background-image: linear-gradient(
@@ -20,5 +23,8 @@
     color: transparent;
     font-size: 6rem;
     margin-bottom: 0.5rem;
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 }

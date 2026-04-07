@@ -5,18 +5,16 @@
 @import "base/typeography";
 @import "base/animations";
 @import "base/utilities";
+@import "components/bgvideo";
 @import "components/featrue-box";
+@import "components/popup";
 @import "components/card";
 @import "components/composition";
-
 @import "components/button";
+@import "components/stories";
+@import "components/form";
+@import "layout/navigation";
 @import "layout/header";
 @import "layout/grid";
+@import "layout/footer";
 @import "pages/home";
-
-/*
-COLORS:
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
